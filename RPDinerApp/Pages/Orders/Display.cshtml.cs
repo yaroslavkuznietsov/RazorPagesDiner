@@ -33,7 +33,7 @@ namespace RPDinerApp.Pages.Orders
             {
                 var food = await _foodData.GetFood();
 
-                ItemPurchased = food.Where(x => x.Id == Id).FirstOrDefault()?.Title;
+                ItemPurchased = food.Where(x => x.Id == Order.FoodId).FirstOrDefault()?.Title;
             }
 
             return Page();
